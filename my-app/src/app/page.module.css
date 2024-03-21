@@ -1,17 +1,17 @@
 /* page.module.css */
 .container {
-  max-width: 600px;
+  max-width: 100%; /* 600px equivalent */
   margin: 0 auto;
-  padding: 20px;
-  background-color: #fff; /* Set background color to white */
-  color: #000; /* Set font color to black */
+  padding: 1.25rem; /* 20px equivalent */
+  background-color: #fff;
+  color: #000;
 }
 
 .title {
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 1.5rem; /* 24px equivalent */
+  margin-bottom: 1.25rem; /* 20px equivalent */
   text-align: center;
-  color: #000; /* Ensure title font color is black */
+  color: #000;
 }
 
 .list {
@@ -20,18 +20,18 @@
 }
 
 .listItem {
-  margin-bottom: 20px;
-  padding: 20px;
+  margin-bottom: 1.25rem; /* 20px equivalent */
+  padding: 1.25rem; /* 20px equivalent */
   border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff; /* Ensure list item background is white */
+  border-radius: 0.3125rem; /* 5px equivalent */
+  background-color: #fff;
 }
 
 .listItem h3 {
   margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 18px;
-  color: #000; /* Ensure team name font color is black */
+  margin-bottom: 0.625rem; /* 10px equivalent */
+  font-size: 1.125rem; /* 18px equivalent */
+  color: #000;
 }
 
 .listItem p {
@@ -41,15 +41,15 @@
 .buttonGroup {
   display: flex;
   justify-content: flex-end;
-  margin-top: 10px;
+  margin-top: 0.625rem; /* 10px equivalent */
 }
 
 .button {
-  margin-left: 10px;
-  padding: 5px 10px;
-  font-size: 14px;
+  margin-left: 0.625rem; /* 10px equivalent */
+  padding: 0.3125rem 0.625rem; /* 5px and 10px equivalent */
+  font-size: 0.875rem; /* 14px equivalent */
   border: none;
-  border-radius: 3px;
+  border-radius: 0.1875rem; /* 3px equivalent */
   cursor: pointer;
   background-color: #007bff;
   color: #fff;
@@ -66,4 +66,29 @@
 .button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .listItem {
+    padding: 1rem;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button {
+    margin-left: 0;
+    margin-bottom: 0.5rem; /* Add space between stacked buttons */
+  }
 }

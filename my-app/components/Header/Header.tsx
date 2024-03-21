@@ -9,12 +9,12 @@ export const Header = () => {
         <ul className={styles.navList}>
           <li className={styles.navItem}>
             <Link href="/">
-              Home
+              <p> Forsíða </p>
             </Link>
           </li>
           <li className={styles.navItem}>
             <Link href="/games">
-              Games
+              <p>Allir leikir</p>
             </Link>
           </li>
         </ul>
