@@ -1,5 +1,5 @@
 'use client';
-// components/Games/Games.tsx
+
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import styles from './Games.module.css';
@@ -36,18 +36,20 @@ const Games: React.FC = () => {
 
   return (
     <div className={styles.gamesContainer}>
-      <h2 className={styles.gamesHeader}>Games</h2>
       <ul className={styles.gamesList}>
-        {games.map((game) => (
-          <li key={game.id} className={styles.gamesItem}>
+      {games.map((game) => (
+        <li key={game.id} className={styles.gamesItem}>
             <Link href={`/games/${game.id}`}>
+            <div> {/* Use a div or any other container element instead of <a> */}
                 <h3>{game.date ? new Date(game.date).toLocaleDateString() : 'Unknown date'}</h3>
                 <p>
-                  {game.home?.name} {game.home?.score} - {game.away?.name} {game.away?.score}
+                {game.home?.name} {game.home?.score} - {game.away?.name} {game.away?.score}
                 </p>
+            </div>
             </Link>
-          </li>
-        ))}
+        </li>
+))}
+
       </ul>
     </div>
   );
