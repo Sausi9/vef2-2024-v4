@@ -1,0 +1,71 @@
+/* teams.module.css */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .listItem {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .listItem h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .listItem p {
+    margin: 0;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  
+  .button, 
+  .deletebutton {
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: black;
+    color: #fff;
+  }
+  
+  .button:hover{
+    background-color: green;
+  }
+  .deletebutton:hover{
+    background-color: red;
+  }
+  
+  .button:focus,
+  .deletebutton:focus {
+    outline: none;
+  }
+  
+  .button:disabled,
+  .deletebutton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+   

@@ -1,40 +1,69 @@
 /* page.module.css */
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff; /* Set background color to white */
+  color: #000; /* Set font color to black */
 }
 
 .title {
+  font-size: 24px;
+  margin-bottom: 20px;
   text-align: center;
-  margin-bottom: 2rem;
+  color: #000; /* Ensure title font color is black */
 }
 
-.table {
-  border-collapse: collapse;
-  width: 80%;
-  max-width: 600px; /* Adjust based on your preference */
+.list {
+  list-style-type: none;
+  padding: 0;
 }
 
-.table th,
-.table td {
-  border: 1px solid #009879; /* Cool greenish border color */
-  text-align: left;
-  padding: 8px;
+.listItem {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff; /* Ensure list item background is white */
 }
 
-.table th {
-  background-color: #009879;
-  color: white;
+.listItem h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #000; /* Ensure team name font color is black */
 }
 
-.table tr:nth-child(even) {
-  background-color: #f2f2f2;
+.listItem p {
+  margin: 0;
 }
 
-.table tr:hover {
-  background-color: #ddd;
+.buttonGroup {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }

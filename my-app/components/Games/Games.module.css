@@ -1,0 +1,33 @@
+/* components/Games/Games.module.css */
+.games-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .games-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .games-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+  
+  .games-link {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .games-link:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .games-header {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
