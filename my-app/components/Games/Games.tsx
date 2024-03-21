@@ -27,7 +27,7 @@ const Games: React.FC = () => {
         setGames(data);
       } catch (error) {
         console.error('Failed to fetch games:', error);
-        // Handle error (e.g., show error message)
+        
       }
     };
 
@@ -40,7 +40,7 @@ const Games: React.FC = () => {
       {games.map((game) => (
         <li key={game.id} className={styles.gamesItem}>
             <Link href={`/games/${game.id}`}>
-            <div> {/* Use a div or any other container element instead of <a> */}
+            <div> 
                 <h3>{game.date ? new Date(game.date).toLocaleDateString() : 'Unknown date'}</h3>
                 <p>
                 {game.home?.name} {game.home?.score} - {game.away?.name} {game.away?.score}

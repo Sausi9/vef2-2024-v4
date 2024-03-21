@@ -23,7 +23,6 @@ export function Teams() {
         throw new Error('Failed to fetch teams');
       }
       const data = await response.json();
-      // Sort teams by their 'id' in ascending order
       const sortedData = data.sort((a: Team, b: Team) => a.id - b.id);
       setTeams(sortedData);
     } catch (error) {
@@ -45,12 +44,9 @@ export function Teams() {
         throw new Error('Failed to delete the team');
       }
   
-      // Update the teams state to remove the deleted team
-      // Assuming your state still tracks teams by their ID, not slug
       setTeams(teams.filter(team => slugify(team.name,{lower: false}) !== teamSlug));
     } catch (error) {
       console.error('Error deleting team:', error);
-      // Optionally, handle the error (e.g., display an error message to the user)
     }
   };
   
@@ -61,7 +57,7 @@ export function Teams() {
 
   return (
     <div>
-    <h2 className={styles.title}>Teams</h2> {/* Apply title style */}
+    <h2 className={styles.title}>Teams</h2> 
     {editingTeam ? (
       <EditTeamForm
         team={editingTeam}
@@ -72,12 +68,12 @@ export function Teams() {
       />
     ) : (
       <div>
-        <ul className={styles.list}> {/* Apply list style */}
+        <ul className={styles.list}> 
           {teams.map((team) => (
-            <li key={team.id} className={styles.listItem}> {/* Apply listItem style */}
+            <li key={team.id} className={styles.listItem}> 
               <h3>{team.name}</h3>
               <p>{team.description}</p>
-              <div className={styles.buttonGroup}> {/* Group buttons together (style not defined yet) */}
+              <div className={styles.buttonGroup}> 
                 <button onClick={() => setEditingTeam(team)} className={styles.button}>Edit</button>
                 <button onClick={() => handleDeleteTeam(team.name)} className={styles.deletebutton}>Delete</button>
               </div>

@@ -1,4 +1,3 @@
-// src/app/games/pages.tsx
 import React from 'react';
 import Games from '../../../components/Games/Games';
 import styles from '../page.module.css'

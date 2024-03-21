@@ -19,7 +19,7 @@ const EditTeamForm = ({ team, onTeamUpdated }: EditTeamFormProps) => {
   useEffect(() => {
     setName(team.name);
     setDescription(team.description);
-  }, [team]); // React to changes in the team prop
+  }, [team]); 
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -34,10 +34,9 @@ const EditTeamForm = ({ team, onTeamUpdated }: EditTeamFormProps) => {
     });
 
     if (response.ok) {
-      onTeamUpdated(); // Refresh the team list in the parent component
+      onTeamUpdated(); 
     } else {
       console.error('Failed to update the team');
-      // Handle error case
     }
   };
 

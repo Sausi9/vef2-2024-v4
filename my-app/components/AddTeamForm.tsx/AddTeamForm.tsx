@@ -18,7 +18,6 @@ const AddTeamForm = ({onTeamAdded}: AddTeamFormProps) => {
 
     const newTeam = { name: teamName, description: teamDescription };
 
-    // Replace with your actual API endpoint
     const response = await fetch('http://localhost:3000/teams', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
